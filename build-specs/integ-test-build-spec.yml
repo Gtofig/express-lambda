@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm install -g npm
+      - npm install
+  build:
+    commands:
+      - npm run test
+
+reports:
+  jest_reports:
+    files:
+      - "test-report.xml"
+    file-format: JUNITXML
+    base-directory: "test-reports"
